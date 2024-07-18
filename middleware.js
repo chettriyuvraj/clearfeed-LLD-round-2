@@ -10,7 +10,7 @@ const rateLimiterMiddlewareWrapper = (limiter) => {
     if (allow) {
       next();
     } else {
-      res.status(429).send(JSON.stringify(message));
+      res.status(429).send(JSON.stringify({ message }));
     }
   };
 };
